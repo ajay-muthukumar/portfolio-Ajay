@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" href="https://img.pikbest.com/png-images/20241022/stealth-masked-hacker-gaming-logo-for-gamers_10991543.png!w700wp" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio BTS SIO SISR - Ajay MUTHU KUMAR</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="script.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066CC',
+                        secondary: '#00A651',
+                        accent: '#FF6B35',
+                        dark: '#1A1A2E',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<header class="sticky top-0 z-50 bg-dark/95 backdrop-blur-sm shadow-xl transition-all duration-300">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#accueil" class="text-2xl font-bold text-white hover:text-accent transition-colors duration-300">
+            Ajay MUTHU KUMAR <span class="text-primary">SIO SISR</span>
+        </a>
+
+          <div class="hidden md:flex space-x-8 text-lg font-medium">
+            <a href="index.html#accueil" class="text-white hover:text-primary transition-colors duration-200">Accueil</a>
+            <a href="index.html#profil" class="text-white hover:text-primary transition-colors duration-200"> À propos</a>
+            <a href="engie.html" class="text-white hover:text-primary transition-colors duration-200">Entreprise</a>
+            <a href="projets.html" class="text-white hover:text-primary transition-colors duration-200">Projets</a>
+            <a href="epreuves.html" class="text-white hover:text-primary transition-colors duration-200">Épreuves</a>
+            <a href="index.html#competences" class="text-white hover:text-primary transition-colors duration-200">Compétences</a>
+            <a href="index.html#veille" class="text-white hover:text-primary transition-colors duration-200">Veille</a>
+            <a href="contact.html" class="text-accent hover:text-orange-400 transition-colors duration-200">Contact</a>
+        </div>
+
+
+
+        <button id="menu-button" class="md:hidden text-white focus:outline-none">
+            <i data-feather="menu" class="w-8 h-8"></i>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-dark/90 text-center pb-4">
+            <a href="index.html#accueil" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Accueil</a>
+            <a href="index.html#profil" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">À propos</a>
+            <a href="engie.html" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Entreprise</a>
+            <a href="projets.html" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Projets</a>
+            <a href="epreuves.html" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Épreuves</a>
+            <a href="index.html#competences" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Compétences</a>
+            <a href="index.html#veille" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Veille</a>
+            <a href="contact.html" class="block py-2 text-accent hover:bg-accent/50 transition-colors duration-200">Contact</a>
+        </div>
+</header>
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Portfolio Personnel - Ajay MUTHU KUMAR</title>
+    
+    <link rel="icon" href="https://img.pikbest.com/png-images/20241022/stealth-masked-hacker-gaming-logo-for-gamers_10991543.png!w700wp" type="image/png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066CC',
+                        secondary: '#00A651',
+                        accent: '#FF6B35',
+                        dark: '#1A1A2E',
+                        light: '#F8F9FA',
+                        card: '#242442'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0B1120; /* Bleu très sombre fond */
+            --card-bg: #151E32; /* Bleu gris carte */
+            --text-main: #E2E8F0;
+            --text-muted: #94A3B8;
+            --accent-blue: #3B82F6;
+            --accent-green: #10B981;
+            --accent-orange: #F59E0B;
+            --border-color: #2D3748;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            
+        }
+        /* --- Styles identiques à la page Linux pour la cohérence --- */
+        .hero-section {
+            background: linear-gradient(135deg, #1A1A2E 0%, #242442 100%);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            padding: 0; /* J'ai mis 0 au lieu de 40px pour que l'image touche les bords */
+            text-align: center;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-section img {
+            width: 100%; /* L'image prend toute la largeur disponible */
+            max-width: 100%;
+            height: auto;
+            /* J'ai enlevé max-height: 400px pour qu'elle ne soit pas bloquée en hauteur */
+            object-fit: cover; 
+            border-radius: 0; /* Plus besoin d'arrondi sur l'image car le conteneur l'a déjà */
+            box-shadow: none; /* Optionnel : enlever l'ombre interne si l'image remplit tout */
+        }
+
+        .main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-bottom: 50px; }
+        
+        .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+        .feature-card {
+            background-color: #242442;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s;
+            color: #F8F9FA;
+        }
+        .feature-card:hover { transform: translateY(-2px); border-color: #0066CC; }
+        .feature-card i { color: var(--accent-green); font-size: 1.1rem; }
+
+        .challenges-list { display: flex; flex-direction: column; gap: 15px; }
+
+        .challenge-item {
+            background: linear-gradient(90deg, rgba(36, 36, 66, 0.8) 0%, rgba(26, 26, 46, 0) 100%);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-left: 4px solid var(--accent-orange);
+            color: #F8F9FA;
+        }
+        .challenge-item i {
+            color: var(--accent-orange);
+            background: rgba(255, 107, 53, 0.1);
+            padding: 10px;
+            border-radius: 50%;
+            min-width: 40px; height: 40px;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .sidebar-card {
+            background-color: #242442;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+            color: #F8F9FA;
+        }
+
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .tech-tag { background-color: #0066CC; color: white; padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; }
+
+        .info-row {
+            margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;
+        }
+
+        .cta-btn {
+            display: block; width: 100%; background-color: #0066CC; color: white; text-align: center;
+            padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 15px;
+            transition: background 0.2s;
+        }
+        .cta-btn:hover { background-color: #005bb5; }
+
+        @media (max-width: 768px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<main class="container mx-auto px-6 py-10">
+        
+    <div class="hero-section">
+        <img src="haproxy-logo.jpg" alt="Aperçu du Portfolio">
+    </div>
+
+    <div class="mb-10 border-l-4 border-primary pl-4">
+        <div class="flex gap-3 mb-2">
+            <span class="bg-gray-800 text-primary px-3 py-1 rounded-full text-sm font-semibold">Projet Scolaire</span>
+            <span class="text-gray-400 text-sm flex items-center"><i class="far fa-calendar mr-2"></i> 2025</span>
+        </div>
+        <h1 class="text-4xl font-bold text-white">High Availability & Load Balancing - HAProxy</h1>
+    </div>
+
+    <div class="main-grid">
+        
+        <div class="left-col text-gray-300">
+            
+            <div class="mb-10">
+                <h2 class="text-2xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">Aperçu du Projet</h2>
+                <p class="leading-relaxed text-justify mb-4">
+                    Ce projet permet de garantir la continuité de service WEB grâce à système de LB (<strong>Load Balancing</strong> : C'est le processus de distribution des charges de travail et du trafic réseau sur plusieurs serveurs)
+                </p>
+                <p class="leading-relaxed text-justify">
+                    et de failover (C'est la capacité d'un équipement à basculer automatiquement vers un réseau ou un système alternatif ou en veille) automatique.
+                </p>
+            </div>
+
+            <div class="mb-10">
+                <h2 class="text-2xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">Fonctionnalités Clés</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-computer"></i>
+                        <span><strong>Répartition de charge (Load Balancing)</strong> : distribution du trafic réseau entre plusieurs serveurs pour améliorer la vitesse et la stabilité des applications.</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-arrow-down-up-lock"></i>
+                        <span><strong>Proxy inverse</strong> : agit comme intermédiaire entre les clients et les serveurs, renforçant la sécurité et la flexibilité</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-shield"></i>
+                        <span><strong>Sécurité avancée</strong> : protection contre les attaques DDoS, filtrage des requêtes, gestion fine des ACL (Access Control Lists)</span>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-eye"></i>
+                        <span><strong> Observabilité </strong>: statistiques en temps réel, logs détaillés et monitoring intégré.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-10">
+                <h2 class="text-2xl font-semibold text-white mb-4 border-b border-gray-700 pb-2">Défis Techniques</h2>
+                <div class="challenges-list">
+                    <div class="challenge-item">
+                        <i class="fas fa-code"></i>
+                        <span><strong>Surveillance et maintenance :</strong> nécessité d’un monitoring constant pour détecter rapidement les anomalies.</span>
+                    </div>
+                    <div class="challenge-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <span><strong>Résilience face aux attaques :</strong> bien que HAProxy offre des protections, il faut configurer correctement les règles pour contrer efficacement les DDoS</span>
+                    </div>
+                    <div class="challenge-item">
+                        <i class="fab fa-git-alt"></i>
+                        <span><strong>Complexité de configuration :</strong> HAProxy est puissant mais nécessite une maîtrise fine des fichiers de configuration, surtout dans des environnements multi-sites.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sidebar">
+            
+            <div class="sidebar-card shadow-lg">
+                <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-layer-group text-primary"></i> Stack Technique</h2>
+                <div class="tech-tags">
+                    <span class="tech-tag">Debian</span>
+                    <span class="tech-tag">Windows 10</span>
+                </div>
+            </div>
+
+            <div class="sidebar-card shadow-lg">
+                <h2 class="text-xl font-bold mb-4">Détails</h2>
+                <div class="info-row">
+                    <span class="info-label">Type</span>
+                    <span class="info-value">Scolaire</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Auteur</span>
+                    <span class="info-value">Ajay MUTHU KUMAR</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Année</span>
+                    <span class="info-value">2025</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Statut</span>
+                    <span class="text-blue-400 font-bold text-sm bg-blue-900/30 px-2 py-1 rounded">En ligne</span>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h2>Ressources</h2>
+                <p style="font-size: 0.9rem; margin-bottom: 10px;">Consulter la documentation technique complète de ce projet.</p>
+                <a href="Livrable HAProxy.pdf" class="cta-btn"><i class="Livrable HAProxy.pdf"></i> Voir le rapport PDF</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mt-16">
+        <h2 class="text-2xl font-bold text-white mb-6 border-l-4 border-accent pl-4">Autres Projets</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <a href="topologie.html" class="block bg-card rounded-xl overflow-hidden border border-gray-700 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
+                <div class="h-50 bg-gray-900 flex items-center justify-center">
+                    <img src="Topologie.png" >
+                                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary">Configuration & Routage Réseau Linux</h3>
+                    <p class="text-sm text-gray-400 mb-3">Routage, DHCP, NAT et segmentation réseau sous Debian et Windows.</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs bg-gray-800 text-blue-300 px-2 py-1 rounded">Linux</span>
+                        <span class="text-xs bg-gray-800 text-blue-300 px-2 py-1 rounded">Réseau</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="Portfolio-personnel.html" class="block bg-card rounded-xl overflow-hidden border border-gray-700 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
+                <div class="h-50 bg-gray-900 flex items-center justify-center">
+                    <img src="Capture d'écran 2025-11-18 091821.png" >
+                                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary">Mon portfolio personnels</h3>
+                    <p class="text-sm text-gray-400 mb-3"> Conception et développement de mon tout premier portfolio numérique pour présenter mes compétences et mon parcours professionnel.</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs bg-gray-800 text-blue-300 px-2 py-1 rounded">HTML</span>
+                        <span class="text-xs bg-gray-800 text-blue-300 px-2 py-1 rounded">CSS</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+</main>
+
+
+<!-- Le footer - le bas du site -->
+
+<footer class="bg-dark text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+    <p>&copy; Ajay MUTHU KUMAR - Portfolio BTS SIO SISR </p>
+    <p class="text-sm opacity-75 mt-2">2025 Tous droits réservés.</p>
+        <div class="social-links">
+        <a href="https://www.linkedin.com/in/ajay-muthu-kumar-350934207/" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+        <a href="#" aria-label="Email"><i data-feather="mail"></i></a>
+        </div>
+        </div>
+        </footer>
+    
+        <script>
+            feather.replace(); // Pour que les icônes fonctionnent
+    
+            // Logique pour le menu mobile (Hamburger)
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+    
+            menuButton.addEventListener('click', () => {
+                // Toggle la visibilité du menu mobile
+                mobileMenu.classList.toggle('hidden');
+                
+                // Change l'icône (menu <-> x)
+                const icon = menuButton.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.setAttribute('data-feather', 'menu');
+                } else {
+                    icon.setAttribute('data-feather', 'x');
+                }
+                feather.replace(); // Re-render l'icône
+            });
+    
+            // Fermer le menu mobile après un clic de lien (pour le scroll)
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    document.querySelector('#menu-button i').setAttribute('data-feather', 'menu');
+                    feather.replace();
+                });
+            });
+        </script>
+    </body>
+    </html>
