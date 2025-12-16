@@ -28,6 +28,7 @@
     </script>
 </head>
 
+
 <header class="sticky top-0 z-50 bg-dark/95 backdrop-blur-sm shadow-xl transition-all duration-300">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
         <a href="#accueil" class="text-2xl font-bold text-white hover:text-accent transition-colors duration-300">
@@ -61,8 +62,136 @@
             <a href="contact.html" class="block py-2 text-accent hover:bg-accent/50 transition-colors duration-200">Contact</a>
         </div>
 </header>
+<style>
+    /* =======================================================
+       A. STYLES GÉNÉRAUX ET ALIGNEMENT
+       ======================================================= */
+    .epreuve-header {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .epreuve-header h2 {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* =======================================================
+       B. STYLES DU MENU DÉROULANT (Dropdown) - CORRIGÉ
+       ======================================================= */
+    .dropdown {
+        position: relative; 
+        display: inline-block;
+        /* Le positionnement absolu est géré par Tailwind sur l'élément HTML */
+    }
+
+    .dropdown-button {
+        background-color: #007bff; /* Bleu standard */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.3s;
+    }
+    
+    /* Correction : Ajout de right: 0 pour que le menu s'ouvre vers la gauche */
+    .dropdown-menu {
+        display: none; /* LA CLÉ : MASQUÉ PAR DÉFAUT */
+        position: absolute; 
+        top: 100%; 
+        right: 0; /* Alignement à droite du bouton parent */
+        left: auto; /* Important pour désactiver left: 0 */
+        z-index: 100; 
+        background-color: white; 
+        min-width: 300px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        border: 1px solid #ddd;
+        border-top: none; 
+        padding: 0;
+        list-style-type: none; 
+        margin: 0;
+        border-radius: 0 0 4px 4px; 
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block; /* AFFICHÉ AU SURVOL */
+    }
+
+    .dropdown-menu li a {
+        color: #333;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        white-space: nowrap; 
+    }
+
+    .dropdown-menu li a:hover {
+        background-color: #f5f5f5; 
+    }
+
+    .dropdown-menu li a .icon {
+        margin-right: 10px;
+        color: #999;
+    }
 
 
+    /* =======================================================
+       C. STYLES DE LA CARTE DE PROJET
+       ======================================================= */
+    .project-card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        overflow: hidden; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-lift:hover {
+        transform: translateY(-5px); 
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-image-placeholder {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .card-image-placeholder img {
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+    }
+
+    /* Tags de technologie */
+    .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tech-tags .tag {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+        border-radius: 4px;
+        color: white;
+        font-weight: 600;
+    }
+
+    /* Couleurs spécifiques aux tags */
+    .tag-cisco { background-color: #00A651; } /* secondary */
+    .tag-VTP { background-color: #FF6B35; } /* accent */
+    .tag-VLSM { background-color: #0066CC; } /* primary */
+    .tag-Routage { background-color: #1A1A2E; } /* dark */
+</style>
 
 <!-- Épreuves Section -->
 <section id="epreuves.html" class="py-20 bg-light text-dark">
@@ -126,15 +255,103 @@
     </div>
     <div class="text-center pt-4">
         <a href="Tableau_de_synthese - Epreuve_E5 - BTS_SIO_2025 - Ajay MUTHU KUMAR.pdf" download 
-           class="inline-flex items-center justify-center 
-                  px-8 py-4 text-xl font-bold rounded-xl 
-                  text-white bg-primary hover:bg-secondary 
-                  transition duration-300 shadow-lg transform hover:scale-105">
+            class="inline-flex items-center justify-center 
+                    px-8 py-4 text-xl font-bold rounded-xl 
+                    text-white bg-primary hover:bg-secondary 
+                    transition duration-300 shadow-lg transform hover:scale-105">
             <i data-feather="download" class="w-6 h-6 mr-3"></i>
             Télécharger mon Tableau de synthèse - Epreuve E5
         </a>
     </div>
+    <br>
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-primary inline-block">Epreuves E6</h2>
+    </div>
+    <div class="flex flex-wrap justify-center gap-8 px-6"> 
+    
+        <article class="project-card hover-lift max-w-sm w-full relative">
+            <div class="dropdown card-dropdown absolute top-0 right-0 p-4 z-10">
+                <button class="dropdown-button">Documents</button>
+                <ul class="dropdown-menu"> 
+                    <li><a href="Schema Mission 1.png"><span class="icon">📄</span> Schéma de l'infra</a></li>
+                    <li><a href="Cahier des Charges StadiumCompany.pdf"><span class="icon">📄</span> Cahier de charge de StadiumCompany</a></li>
+                    <li><a href="modele_fiche_mission1_SIO_IRIS - Ajay MUTHU KUMAR .pdf"><span class="icon">📄</span> Fiche de mission de StadiumCompany </a></li>
+                </ul>
+            </div>
+    
+            <div class="card-image-placeholder h-40">
+                <img src="Stadiumcompany.png.png" alt="Infrastructure StadiumCompany">
+            </div>
+            <div class="card-content p-4">
+                <h3 class="text-xl font-semibold text-dark mb-2">Mission 1 : Restructuration de l'Infrastructure de StadiumCompany - E6</h3>
+                <p class="text-gray-600 text-base mb-3">Mise en place d'une infrastructure réseau fonctionnelle, segmentée en VLANs, utilisant le VTP pour la gestion des switchs et le routage inter-VLAN/statique pour assurer la connectivité sur Cisco Packet Tracer.</p>
+                <div class="tech-tags">
+                    <span class="tag tag-cisco">Cisco</span>
+                    <span class="tag tag-VTP">VTP</span>
+                    <span class="tag tag-VLSM">VLSM</span>
+                    <span class="tag tag-Routage">Routage</span>
+                </div>
+            </div>
+        </article>
+    
+        <article class="project-card hover-lift max-w-sm w-full relative">
+            <div class="dropdown card-dropdown absolute top-0 right-0 p-4 z-10">
+                <button class="dropdown-button">Documents</button>
+                <ul class="dropdown-menu"> 
+                    <li><a href="Schema Mission 2.png"><span class="icon">📄</span> Schéma de l'infra</a></li>
+                    <li><a href="Cahier des Charges StadiumCompany.pdf"><span class="icon">📄</span> Cahier de charge de StadiumCompany</a></li>
+                    <li><a href="modele_fiche_mission2_SIO_IRIS - Ajay MUTHU KUMAR.pdf"><span class="icon">📄</span> Fiche de mission de StadiumCompany </a></li>
+                </ul>
+            </div>
+    
+            <div class="card-image-placeholder h-40">
+                <img src="Stadiumcompany.png.png" alt="Infrastructure StadiumCompany">
+            </div>
+            <div class="card-content p-4">
+                <h3 class="text-xl font-semibold text-dark mb-2">Mission 2 : Infrastructure, Configuration et Administration de StadiumCompany - E6</h3>
+                <p class="text-gray-600 text-base mb-3">Mise en place d'une infrastructure virtuelle complète (VMware) comprenant les services essentiels de l'entreprise : Active Directory pour la gestion centralisée, serveurs DNS (Primaire & Secondaire) et serveurs DHCP (Failover) pour la continuité de service, et un serveur RSync pour la synchronisation des fichiers.</p>
+                <div class="tech-tags">
+                    <span class="tag tag-cisco">Active Directory</span>
+                    <span class="tag tag-VTP">DHCP Failover</span>
+                    <span class="tag tag-VLSM">DNS Redondance</span>
+                    <span class="tag tag-Routage">RSync</span>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="project-card hover-lift max-w-sm w-full relative">
+            <div class="dropdown card-dropdown absolute top-0 right-0 p-4 z-10">
+                <button class="dropdown-button">Documents</button>
+                <ul class="dropdown-menu"> 
+                    <li><a href="Schema Mission 3.png"><span class="icon">📄</span> Schéma de l'infra</a></li>
+                    <li><a href="Cahier des Charges StadiumCompany.pdf"><span class="icon">📄</span> Cahier de charge de StadiumCompany</a></li>
+                    <li><a href="modele_fiche_mission3_SIO_IRIS - Ajay MUTHU KUMAR.pdf"><span class="icon">📄</span> Fiche de mission de StadiumCompany </a></li>
+                </ul>
+            </div>
+    
+            <div class="card-image-placeholder h-40">
+                <img src="Stadiumcompany.png.png" alt="Infrastructure StadiumCompany">
+            </div>
+            <div class="card-content p-4">
+                <h3 class="text-xl font-semibold text-dark mb-2">Mission 3 : Mise en Place d'une Solution pour l'Administration - E6</h3>
+                <p class="text-gray-600 text-base mb-3">Mise en œuvre d'une solution complète pour sécuriser l'administration et les communications inter-sites (Stade, Billetterie, Boutique). Configuration d'un VPN IPsec Site-to-Site entre les routeurs Cisco pour garantir la confidentialité et la traçabilité des échanges.</p>
+                <div class="tech-tags">
+                    <span class="tag tag-cisco">VPN IPsec</span>
+                    <span class="tag tag-VTP">Routeurs Cisco</span>
+                    <span class="tag tag-VLSM">Administration SSH</span>
+                    <span class="tag tag-Routage">Sécurité Inter-Sites</span>
+                </div>
+            </div>
+            
+        </article>
+    
+    </div>
+    
   </section>
+
+
+
   
 
 <footer class="bg-dark text-white py-8">
