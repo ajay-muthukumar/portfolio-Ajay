@@ -36,12 +36,11 @@
 
           <div class="hidden md:flex space-x-8 text-lg font-medium">
             <a href="index.html#accueil" class="text-white hover:text-primary transition-colors duration-200">Accueil</a>
-            <a href="index.html#profil" class="text-white hover:text-primary transition-colors duration-200"> À propos</a>
             <a href="engie.html" class="text-white hover:text-primary transition-colors duration-200">Entreprise</a>
             <a href="projets.html" class="text-white hover:text-primary transition-colors duration-200">Projets</a>
             <a href="epreuves.html" class="text-white hover:text-primary transition-colors duration-200">Épreuves</a>
             <a href="veille.html" class="text-white hover:text-primary transition-colors duration-200">Veille</a>
-            <a href="contact.html" class="text-accent hover:text-orange-400 transition-colors duration-200">Contact</a>
+            <a href="contact.html" class="text-accent hover:text-orange-400 transition-colors duration-200">Contact</a
         </div>
 
 
@@ -53,7 +52,6 @@
 
     <div id="mobile-menu" class="hidden md:hidden bg-dark/90 text-center pb-4">
             <a href="index.html#accueil" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Accueil</a>
-            <a href="index.html#profil" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">À propos</a>
             <a href="engie.html" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Entreprise</a>
             <a href="projets.html" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Projets</a>
             <a href="epreuves.html" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Épreuves</a>
@@ -400,5 +398,116 @@
             });
         });
     </script>
+
+ <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-primary">Contact</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-semibold text-primary">Restons en contact</h3>
+                        <p class="text-lg">
+                            N'hésitez pas à me contacter pour discuter de projets, d'opportunités 
+                            ou simplement échanger autour des technologies.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-primary text-white p-3 rounded-full">
+                                    <i data-feather="mail" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Email</p>
+                                    <p class="text-gray-600">ajay.muthukumar2102@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-secondary text-white p-3 rounded-full">
+                                    <i data-feather="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Téléphone</p>
+                                    <p class="text-gray-600">+33 6 29 75 98 77</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-accent text-white p-3 rounded-full">
+                                    <i data-feather="linkedin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Linkedin</p>
+                                    <p class="text-gray-600"><a href="https://www.linkedin.com/in/ajay-muthu-kumar-350934207/" target="_blank">Ajay MUTHU KUMAR</a></p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="mt-8 rounded_x1 overflow-hidden shadow-lg">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20988.778787215062!2d2.2933550000000005!3d48.884952!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f91aa85bfb1%3A0xca6c403c8e457b76!2sIRIS%20-%20%C3%89cole%20sup%C3%A9rieure%20d&#39;informatique!5e0!3m2!1sfr!2sfr!4v1765322023932!5m2!1sfr!2sfr" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded-2xl p-8 shadow-lg">
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-primary">Nom</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300" placeholder="Votre nom">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-primary">Email</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300" placeholder="Votre email">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-primary">Message</label>
+                                <textarea rows="5" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300" placeholder="Votre message"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="bg-dark text-white py-8">
+<div class="container mx-auto px-6 text-center">
+<p>&copy; Ajay MUTHU KUMAR - Portfolio BTS SIO SISR </p>
+<p class="text-sm opacity-75 mt-2">2025 Tous droits réservés.</p>
+    <div class="social-links">
+    <a href="#" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+    <a href="#" aria-label="Email"><i data-feather="mail"></i></a>
+    </div>
+    </div>
+    </footer>
+ <script>
+        feather.replace(); // Pour que les icônes fonctionnent
+
+        // Logique pour le menu mobile (Hamburger)
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            // Toggle la visibilité du menu mobile
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change l'icône (menu <-> x)
+            const icon = menuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('data-feather', 'menu');
+            } else {
+                icon.setAttribute('data-feather', 'x');
+            }
+            feather.replace(); // Re-render l'icône
+        });
+
+        // Fermer le menu mobile après un clic de lien (pour le scroll)
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.querySelector('#menu-button i').setAttribute('data-feather', 'menu');
+                feather.replace();
+            });
+        });
+    </script>
 </body>
 </html>
+
