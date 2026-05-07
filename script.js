@@ -52,8 +52,9 @@ window.addEventListener('scroll', setActiveNav);
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.querySelector('#contact form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+        // Ajout de "async" ici pour pouvoir utiliser fetch
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); // On bloque toujours le rechargement de la page
             
             // Simple form validation
             const inputs = contactForm.querySelectorAll('input, textarea');
@@ -69,26 +70,56 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             
             if (isValid) {
-                // Show success message
                 const submitBtn = contactForm.querySelector('button[type="submit"]');
                 const originalText = submitBtn.textContent;
                 
-                submitBtn.textContent = 'Message envoyé !';
-                submitBtn.classList.add('bg-secondary');
+                // État de chargement
+                submitBtn.textContent = 'Envoi en cours...';
                 submitBtn.disabled = true;
-                
-                // Reset form
-                setTimeout(() => {
-                    contactForm.reset();
-                    submitBtn.textContent = originalText;
-                    submitBtn.classList.remove('bg-secondary');
-                    submitBtn.disabled = false;
-                }, 3000);
+
+                try {
+                    // On récupère les données et on les envoie à Formspree
+                    const formData = new FormData(contactForm);
+                    const response = await fetch(contactForm.action, {
+                        method: contactForm.method,
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        // Si Formspree confirme la réception :
+                        submitBtn.textContent = 'Message envoyé !';
+                        submitBtn.classList.add('bg-secondary');
+                        
+                        // Reset form après 3 secondes
+                        setTimeout(() => {
+                            contactForm.reset();
+                            submitBtn.textContent = originalText;
+                            submitBtn.classList.remove('bg-secondary');
+                            submitBtn.disabled = false;
+                        }, 3000);
+                    } else {
+                        // En cas d'erreur de Formspree
+                        submitBtn.textContent = "Erreur d'envoi";
+                        setTimeout(() => {
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                        }, 3000);
+                    }
+                } catch (error) {
+                    // En cas de problème de connexion internet
+                    submitBtn.textContent = "Erreur réseau";
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }, 3000);
+                }
             }
         });
     }
 });
-
 // Scroll to top functionality
 function scrollToTop() {
     window.scrollTo({
